@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rosetta-flow"
+version = "0.1.0"
+description = "Open, on-prem auditor for AI-agent traces, built with Apertus"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.13"
+dependencies = [
+    "json-repair>=0.63",
+    "openai>=1.40",
+    "pydantic>=2.6",
+    "python-dotenv>=1.0",
+    "regex>=2024.11",
+]
+
+[project.optional-dependencies]
+app = ["fastapi>=0.110", "uvicorn>=0.29"]
+train = ["torch", "transformers", "peft", "trl", "datasets", "accelerate"]
+dev = ["pytest>=8", "ruff>=0.15"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["rosetta_flow*"]
+
+[tool.setuptools.package-data]
+rosetta_flow = ["app/static/*.html", "app/static/assets/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["src/tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+# E/W pycodestyle, F pyflakes, I isort, UP pyupgrade, B bugbear, SIM simplify, RUF ruff-specific
+select = ["E", "W", "F", "I", "UP", "B", "SIM", "RUF"]
+# RUF001-003 flag ambiguous unicode; traces legitimately contain de/fr/it text.
+# SIM905 would explode "a b c".split() word lists into one item per line.
+ignore = ["RUF001", "RUF002", "RUF003", "SIM905"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["rosetta_flow"]
+
+[tool.ruff.format]
+quote-style = "double"

@@ -1,0 +1,44 @@
+{
+  "created": "2026-10-09T10:59:16+00:00",
+  "traces_file": "/repo/sets/taubench-airline/traces.jsonl",
+  "model": "base",
+  "mode": "investigate",
+  "variant": "default",
+  "audited": 100,
+  "failures": [],
+  "stopped_by_budget": false,
+  "no_report": {
+    "unparseable_tool_calls": 25,
+    "no_report": 6,
+    "tool_call_limit": 5,
+    "bad_request: Error code: 400 - {'error': {'message': \"This model's maximum context length is 16384 tokens. However, you requested 2000 output tokens and your prompt contains at least 14385 input tokens, for a tota": 5
+  },
+  "report_fallbacks": {
+    "no_report": 1,
+    "unparseable_tool_calls": 1,
+    "tool_call_limit": 1
+  },
+  "verdicts": {
+    "issues_found": 23,
+    "ok": 36
+  },
+  "findings_by_type": {
+    "contradicts_tool_result": 14,
+    "policy_violation": 11,
+    "hallucinated_fact": 4,
+    "ignored_tool_error": 5,
+    "skipped_required_step": 3,
+    "wrong_tool_args": 1
+  },
+  "evidence_verified_rate": 0.447,
+  "tool_calls_mean": 3.9,
+  "duration_s_mean": 37.6,
+  "tokens": {
+    "prompt": 2508223,
+    "completion": 168804,
+    "per_trace": 26770,
+    "this_invocation": 2677027
+  },
+  "cost_chf": null,
+  "chf_per_1000_traces": null
+}

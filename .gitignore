@@ -1,0 +1,121 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials*.json
+.netrc
+
+# Model weights and checkpoints: never commit
+*.bin
+*.safetensors
+*.gguf
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.h5
+*.msgpack
+checkpoints/
+adapters/
+outputs/
+runs/
+merged_model*/
+
+# Experiment tracking / caches
+wandb/
+mlruns/
+lightning_logs/
+.cache/
+hf_cache/
+.huggingface/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+.eggs/
+pip-wheel-metadata/
+.venv/
+venv/
+env/
+.python-version
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.pyre/
+.pytype/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+dist/
+build/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.next/
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# Logs and temp files
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+*~
+
+# Archives (large datasets go to Hugging Face, not git)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# OS and editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.code-workspace
+
+# Generated simulation batches: regenerated from seeds, published via the HF dataset
+track_2b/data/sim/
+track_2b/data/sets/
+track_2b/data/gold/
+track_2b/data/sft/
+track_2b/data/kaggle/
+track_2b/data/rl/
+# Raw audit runs (full transcripts, MBs each): published via the HF dataset; summaries and score tables stay
+track_2b/results/**/progress.jsonl
+track_2b/results/**/audits.jsonl
+track_2b/results/scratch/
+
+# Human review trail written by the web app
+track_2b/reviews/
+# Raw evidence downloaded from the HF dataset repo; the curated copy is results/offline-proof/
+track_2b/results/hf/offline-proof-*/
+
+# Training notebooks (Kaggle working copies)
+track_2b/notebooks/

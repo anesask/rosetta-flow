@@ -1,0 +1,77 @@
+{
+  "traces": 120,
+  "valid": 120,
+  "balanced_acc": 0.542,
+  "recall": 0.95,
+  "false_alarms": 0.867,
+  "span_hit_rate": 0.7,
+  "brier": 0.3696,
+  "ece": 0.3363,
+  "p_issue_distinct": 6,
+  "seconds_mean": 1.65,
+  "curve": [
+    {
+      "threshold": 0.1,
+      "escalated": 0.933,
+      "balanced_acc": 0.683,
+      "recall": 0.867,
+      "false_alarms": 0.5
+    },
+    {
+      "threshold": 0.2,
+      "escalated": 0.908,
+      "balanced_acc": 0.683,
+      "recall": 0.867,
+      "false_alarms": 0.5
+    },
+    {
+      "threshold": 0.3,
+      "escalated": 0.908,
+      "balanced_acc": 0.683,
+      "recall": 0.867,
+      "false_alarms": 0.5
+    },
+    {
+      "threshold": 0.4,
+      "escalated": 0.908,
+      "balanced_acc": 0.683,
+      "recall": 0.867,
+      "false_alarms": 0.5
+    },
+    {
+      "threshold": 0.5,
+      "escalated": 0.908,
+      "balanced_acc": 0.683,
+      "recall": 0.867,
+      "false_alarms": 0.5
+    },
+    {
+      "threshold": 0.6,
+      "escalated": 0.908,
+      "balanced_acc": 0.683,
+      "recall": 0.867,
+      "false_alarms": 0.5
+    },
+    {
+      "threshold": 0.7,
+      "escalated": 0.908,
+      "balanced_acc": 0.683,
+      "recall": 0.867,
+      "false_alarms": 0.5
+    },
+    {
+      "threshold": 0.8,
+      "escalated": 0.908,
+      "balanced_acc": 0.683,
+      "recall": 0.867,
+      "false_alarms": 0.5
+    },
+    {
+      "threshold": 0.9,
+      "escalated": 0.408,
+      "balanced_acc": 0.492,
+      "recall": 0.267,
+      "false_alarms": 0.283
+    }
+  ]
+}

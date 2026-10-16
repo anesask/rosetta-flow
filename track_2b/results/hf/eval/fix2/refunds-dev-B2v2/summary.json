@@ -1,0 +1,38 @@
+{
+  "created": "2026-10-09T07:29:55+00:00",
+  "traces_file": "/repo/sets/refunds-dev/traces.jsonl",
+  "model": "auditor-v2",
+  "mode": "investigate",
+  "variant": "default",
+  "audited": 120,
+  "failures": [],
+  "stopped_by_budget": false,
+  "no_report": {
+    "tool_call_limit": 3,
+    "bad_request: Error code: 400 - {'error': {'message': \"This model's maximum context length is 16384 tokens. However, you requested 2000 output tokens and your prompt contains at least 14385 input tokens, for a tota": 1
+  },
+  "report_fallbacks": {},
+  "verdicts": {
+    "ok": 39,
+    "issues_found": 77
+  },
+  "findings_by_type": {
+    "contradicts_tool_result": 44,
+    "policy_violation": 8,
+    "skipped_required_step": 18,
+    "false_completion": 5,
+    "wrong_tool_args": 3,
+    "language_mismatch": 2
+  },
+  "evidence_verified_rate": 0.775,
+  "tool_calls_mean": 3.7,
+  "duration_s_mean": 13.9,
+  "tokens": {
+    "prompt": 1245515,
+    "completion": 83651,
+    "per_trace": 11076,
+    "this_invocation": 1329166
+  },
+  "cost_chf": null,
+  "chf_per_1000_traces": null
+}

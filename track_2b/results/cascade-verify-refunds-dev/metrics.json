@@ -1,0 +1,215 @@
+{
+  "created": "2026-10-09T19:00:53+00:00",
+  "set": "data\\sets\\refunds-dev",
+  "tiers": {
+    "traces": 120,
+    "escalated_to_confirmer": 61,
+    "escalated_share": 0.508,
+    "confirmer_tokens_used": 143941,
+    "confirmer_tokens_if_alone": 143941,
+    "confirmer_token_share": 1.0,
+    "screener_tokens": 1729089
+  },
+  "systems": [
+    {
+      "system": "B3-alone",
+      "traces": 120,
+      "error_traces": 60,
+      "balanced_accuracy": 0.683,
+      "strict_f1": 0.597,
+      "strict_precision": 0.512,
+      "strict_recall": 0.717,
+      "precision": 0.631,
+      "recall": 0.883,
+      "f1": 0.736,
+      "false_alarm_rate": 0.517,
+      "localisation_recall": 0.717,
+      "type_accuracy_strict": 0.512,
+      "type_accuracy_lenient": 0.674,
+      "evidence_verified": 0.893,
+      "failed_audits": 2,
+      "tool_calls_mean": 3.8,
+      "duration_s_mean": 22.1,
+      "tokens_per_trace": 12579,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.857,
+        "false_completion": 0.75,
+        "hallucinated_fact": 0.625,
+        "ignored_tool_error": 0.857,
+        "language_mismatch": 0.333,
+        "skipped_required_step": 1.0,
+        "voucher_over_limit": 0.667,
+        "wrong_order": 0.833,
+        "wrong_tool_args": 0.5
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.895,
+          "false_alarm_rate": 0.522
+        },
+        "en": {
+          "recall": 0.944,
+          "false_alarm_rate": 0.533
+        },
+        "fr": {
+          "recall": 0.875,
+          "false_alarm_rate": 0.529
+        },
+        "it": {
+          "recall": 0.714,
+          "false_alarm_rate": 0.4
+        }
+      }
+    },
+    {
+      "system": "B1",
+      "traces": 120,
+      "error_traces": 60,
+      "balanced_accuracy": 0.658,
+      "strict_f1": 0.479,
+      "strict_precision": 0.491,
+      "strict_recall": 0.467,
+      "precision": 0.667,
+      "recall": 0.633,
+      "f1": 0.65,
+      "false_alarm_rate": 0.317,
+      "localisation_recall": 0.467,
+      "type_accuracy_strict": 0.536,
+      "type_accuracy_lenient": 0.643,
+      "evidence_verified": 0.662,
+      "failed_audits": 5,
+      "tool_calls_mean": 4.1,
+      "duration_s_mean": 27.2,
+      "tokens_per_trace": 14409,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.429,
+        "false_completion": 0.5,
+        "hallucinated_fact": 0.125,
+        "ignored_tool_error": 0.571,
+        "language_mismatch": 0.667,
+        "skipped_required_step": 1.0,
+        "voucher_over_limit": 0.5,
+        "wrong_order": 0.333,
+        "wrong_tool_args": 0.167
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.579,
+          "false_alarm_rate": 0.435
+        },
+        "en": {
+          "recall": 0.833,
+          "false_alarm_rate": 0.333
+        },
+        "fr": {
+          "recall": 0.625,
+          "false_alarm_rate": 0.118
+        },
+        "it": {
+          "recall": 0.286,
+          "false_alarm_rate": 0.4
+        }
+      }
+    },
+    {
+      "system": "verify70B",
+      "traces": 120,
+      "error_traces": 60,
+      "balanced_accuracy": 0.3,
+      "strict_f1": 0.373,
+      "strict_precision": 0.311,
+      "strict_recall": 0.467,
+      "precision": 0.367,
+      "recall": 0.55,
+      "f1": 0.44,
+      "false_alarm_rate": 0.95,
+      "localisation_recall": 0.467,
+      "type_accuracy_strict": 0.464,
+      "type_accuracy_lenient": 0.571,
+      "evidence_verified": 0.727,
+      "failed_audits": 63,
+      "tool_calls_mean": 0.0,
+      "duration_s_mean": 3.9,
+      "tokens_per_trace": 2360,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.571,
+        "false_completion": 0.625,
+        "hallucinated_fact": 0.25,
+        "ignored_tool_error": 0.429,
+        "language_mismatch": 0.667,
+        "skipped_required_step": 0.667,
+        "voucher_over_limit": 0.667,
+        "wrong_order": 0.167,
+        "wrong_tool_args": 0.167
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.368,
+          "false_alarm_rate": 0.957
+        },
+        "en": {
+          "recall": 0.778,
+          "false_alarm_rate": 0.867
+        },
+        "fr": {
+          "recall": 0.562,
+          "false_alarm_rate": 1.0
+        },
+        "it": {
+          "recall": 0.429,
+          "false_alarm_rate": 1.0
+        }
+      }
+    },
+    {
+      "system": "B1 screens, verify70B confirms",
+      "traces": 120,
+      "error_traces": 60,
+      "balanced_accuracy": 0.642,
+      "strict_f1": 0.514,
+      "strict_precision": 0.571,
+      "strict_recall": 0.467,
+      "precision": 0.673,
+      "recall": 0.55,
+      "f1": 0.606,
+      "false_alarm_rate": 0.267,
+      "localisation_recall": 0.467,
+      "type_accuracy_strict": 0.464,
+      "type_accuracy_lenient": 0.571,
+      "evidence_verified": 0.727,
+      "failed_audits": 4,
+      "tool_calls_mean": 4.1,
+      "duration_s_mean": 29.2,
+      "tokens_per_trace": 15609,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.571,
+        "false_completion": 0.625,
+        "hallucinated_fact": 0.25,
+        "ignored_tool_error": 0.429,
+        "language_mismatch": 0.667,
+        "skipped_required_step": 0.667,
+        "voucher_over_limit": 0.667,
+        "wrong_order": 0.167,
+        "wrong_tool_args": 0.167
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.368,
+          "false_alarm_rate": 0.391
+        },
+        "en": {
+          "recall": 0.778,
+          "false_alarm_rate": 0.2
+        },
+        "fr": {
+          "recall": 0.562,
+          "false_alarm_rate": 0.118
+        },
+        "it": {
+          "recall": 0.429,
+          "false_alarm_rate": 0.4
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "created": "2026-10-09T07:39:40+00:00",
+  "set": "/repo/sets/manufacturing-dev",
+  "systems": [
+    {
+      "system": "B1 8B harness",
+      "traces": 124,
+      "error_traces": 62,
+      "balanced_accuracy": 0.589,
+      "strict_f1": 0.264,
+      "strict_precision": 0.271,
+      "strict_recall": 0.258,
+      "precision": 0.593,
+      "recall": 0.565,
+      "f1": 0.579,
+      "false_alarm_rate": 0.387,
+      "localisation_recall": 0.258,
+      "type_accuracy_strict": 0.312,
+      "type_accuracy_lenient": 0.625,
+      "evidence_verified": 0.474,
+      "failed_audits": 8,
+      "tool_calls_mean": 4.5,
+      "duration_s_mean": 33.3,
+      "tokens_per_trace": 18305,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.2,
+        "data_leak": 0.167,
+        "false_completion": 0.333,
+        "hallucinated_fact": 0.4,
+        "ignored_tool_error": 0.2,
+        "language_mismatch": 0.143,
+        "release_without_approval": 1.0,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.2,
+        "too_few_first_pieces": 0.0,
+        "wrong_order": 0.4,
+        "wrong_revision": 0.0,
+        "wrong_tool_args": 0.0
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.636,
+          "false_alarm_rate": 0.273
+        },
+        "en": {
+          "recall": 0.474,
+          "false_alarm_rate": 0.333
+        },
+        "fr": {
+          "recall": 0.667,
+          "false_alarm_rate": 0.5
+        },
+        "it": {
+          "recall": 0.444,
+          "false_alarm_rate": 0.667
+        }
+      }
+    },
+    {
+      "system": "B2 v2 8B + LoRA bf16 3 ep",
+      "traces": 124,
+      "error_traces": 62,
+      "balanced_accuracy": 0.565,
+      "strict_f1": 0.233,
+      "strict_precision": 0.241,
+      "strict_recall": 0.226,
+      "precision": 0.569,
+      "recall": 0.532,
+      "f1": 0.55,
+      "false_alarm_rate": 0.403,
+      "localisation_recall": 0.226,
+      "type_accuracy_strict": 0.357,
+      "type_accuracy_lenient": 0.571,
+      "evidence_verified": 0.667,
+      "failed_audits": 4,
+      "tool_calls_mean": 4.2,
+      "duration_s_mean": 15.8,
+      "tokens_per_trace": 14201,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.2,
+        "data_leak": 0.167,
+        "false_completion": 0.167,
+        "hallucinated_fact": 0.2,
+        "ignored_tool_error": 0.2,
+        "language_mismatch": 0.143,
+        "release_without_approval": 0.4,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.4,
+        "too_few_first_pieces": 0.0,
+        "wrong_order": 0.2,
+        "wrong_revision": 0.0,
+        "wrong_tool_args": 0.6
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.682,
+          "false_alarm_rate": 0.318
+        },
+        "en": {
+          "recall": 0.526,
+          "false_alarm_rate": 0.333
+        },
+        "fr": {
+          "recall": 0.333,
+          "false_alarm_rate": 0.591
+        },
+        "it": {
+          "recall": 0.444,
+          "false_alarm_rate": 0.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "model": "swiss-ai/Apertus-v1.5-70B",
+  "audited": 61,
+  "failures": [],
+  "stopped_by_budget": false,
+  "verdicts": {
+    "ok": 8,
+    "issues_found": 49,
+    "failed": 4
+  },
+  "tokens": 143941,
+  "completion_tokens": 14609,
+  "cost_chf": 0.0133
+}

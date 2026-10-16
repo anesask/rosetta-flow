@@ -1,0 +1,37 @@
+{
+  "created": "2026-10-09T06:37:01+00:00",
+  "traces_file": "data\\sets\\refunds-test\\traces.jsonl",
+  "model": "swiss-ai/Apertus-v1.5-70B",
+  "mode": "investigate",
+  "variant": "default",
+  "audited": 130,
+  "failures": [],
+  "stopped_by_budget": false,
+  "no_report": {},
+  "verdicts": {
+    "ok": 44,
+    "issues_found": 86
+  },
+  "findings_by_type": {
+    "contradicts_tool_result": 60,
+    "policy_violation": 21,
+    "wrong_tool": 1,
+    "skipped_required_step": 10,
+    "false_completion": 6,
+    "language_mismatch": 3,
+    "wrong_order": 4,
+    "wrong_tool_args": 2,
+    "ignored_tool_error": 1
+  },
+  "evidence_verified_rate": 0.852,
+  "tool_calls_mean": 3.6,
+  "duration_s_mean": 15.7,
+  "tokens": {
+    "prompt": 1339542,
+    "completion": 131541,
+    "per_trace": 11316,
+    "this_invocation": 1471083
+  },
+  "cost_chf": 0.1358,
+  "chf_per_1000_traces": 1.04
+}

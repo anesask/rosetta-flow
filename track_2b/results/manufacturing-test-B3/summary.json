@@ -1,0 +1,39 @@
+{
+  "created": "2026-10-09T06:47:10+00:00",
+  "traces_file": "data\\sets\\manufacturing-test\\traces.jsonl",
+  "model": "swiss-ai/Apertus-v1.5-70B",
+  "mode": "investigate",
+  "variant": "default",
+  "audited": 132,
+  "failures": [],
+  "stopped_by_budget": false,
+  "no_report": {},
+  "verdicts": {
+    "issues_found": 64,
+    "ok": 68
+  },
+  "findings_by_type": {
+    "false_completion": 3,
+    "policy_violation": 26,
+    "hallucinated_fact": 1,
+    "wrong_tool": 2,
+    "wrong_tool_args": 3,
+    "contradicts_tool_result": 21,
+    "language_mismatch": 2,
+    "wrong_order": 3,
+    "skipped_required_step": 1,
+    "ignored_tool_error": 1,
+    "data_leak": 1
+  },
+  "evidence_verified_rate": 0.828,
+  "tool_calls_mean": 3.6,
+  "duration_s_mean": 13.7,
+  "tokens": {
+    "prompt": 1521336,
+    "completion": 115356,
+    "per_trace": 12399,
+    "this_invocation": 1636692
+  },
+  "cost_chf": 0.1511,
+  "chf_per_1000_traces": 1.14
+}

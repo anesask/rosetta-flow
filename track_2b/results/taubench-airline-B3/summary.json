@@ -1,0 +1,42 @@
+{
+  "created": "2026-10-09T11:00:43+00:00",
+  "traces_file": "data\\sets\\taubench-airline\\traces.jsonl",
+  "model": "swiss-ai/Apertus-v1.5-70B",
+  "mode": "investigate",
+  "variant": "default",
+  "audited": 100,
+  "failures": [],
+  "stopped_by_budget": false,
+  "no_report": {
+    "unparseable_tool_calls": 1,
+    "tool_call_limit": 1,
+    "no_report": 1
+  },
+  "report_fallbacks": {},
+  "verdicts": {
+    "issues_found": 52,
+    "ok": 45
+  },
+  "findings_by_type": {
+    "policy_violation": 17,
+    "contradicts_tool_result": 35,
+    "hallucinated_fact": 2,
+    "skipped_required_step": 11,
+    "wrong_order": 4,
+    "wrong_tool": 2,
+    "false_completion": 3,
+    "wrong_tool_args": 5,
+    "ignored_tool_error": 2
+  },
+  "evidence_verified_rate": 0.593,
+  "tool_calls_mean": 5.1,
+  "duration_s_mean": 24.0,
+  "tokens": {
+    "prompt": 3500003,
+    "completion": 146533,
+    "per_trace": 36465,
+    "this_invocation": 3646536
+  },
+  "cost_chf": 0.3366,
+  "chf_per_1000_traces": 3.37
+}

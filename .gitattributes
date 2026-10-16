@@ -1,0 +1,9 @@
+# LF everywhere: CRLF breaks the Makefile and shell snippets on Linux/macOS and inside Docker.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.gif binary
+*.pdf binary
+*.mp4 binary
+*.parquet binary

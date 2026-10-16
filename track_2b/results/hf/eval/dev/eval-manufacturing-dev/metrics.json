@@ -1,0 +1,168 @@
+{
+  "created": "2026-10-09T06:03:03+00:00",
+  "set": "/repo/sets/manufacturing-dev",
+  "systems": [
+    {
+      "system": "B1 8B harness",
+      "traces": 124,
+      "error_traces": 62,
+      "balanced_accuracy": 0.5,
+      "strict_f1": 0.226,
+      "strict_precision": 0.273,
+      "strict_recall": 0.194,
+      "precision": 0.5,
+      "recall": 0.355,
+      "f1": 0.415,
+      "false_alarm_rate": 0.355,
+      "localisation_recall": 0.194,
+      "type_accuracy_strict": 0.583,
+      "type_accuracy_lenient": 0.833,
+      "evidence_verified": 0.471,
+      "failed_audits": 10,
+      "tool_calls_mean": 4.2,
+      "duration_s_mean": 31.6,
+      "tokens_per_trace": 17517,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.0,
+        "data_leak": 0.167,
+        "false_completion": 0.167,
+        "hallucinated_fact": 0.4,
+        "ignored_tool_error": 0.8,
+        "language_mismatch": 0.0,
+        "release_without_approval": 0.4,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.2,
+        "too_few_first_pieces": 0.0,
+        "wrong_order": 0.2,
+        "wrong_revision": 0.0,
+        "wrong_tool_args": 0.0
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.364,
+          "false_alarm_rate": 0.273
+        },
+        "en": {
+          "recall": 0.316,
+          "false_alarm_rate": 0.333
+        },
+        "fr": {
+          "recall": 0.417,
+          "false_alarm_rate": 0.409
+        },
+        "it": {
+          "recall": 0.333,
+          "false_alarm_rate": 0.667
+        }
+      }
+    },
+    {
+      "system": "B2 v2 8B + LoRA bf16 3 ep",
+      "traces": 124,
+      "error_traces": 62,
+      "balanced_accuracy": 0.476,
+      "strict_f1": 0.291,
+      "strict_precision": 0.309,
+      "strict_recall": 0.274,
+      "precision": 0.473,
+      "recall": 0.419,
+      "f1": 0.444,
+      "false_alarm_rate": 0.468,
+      "localisation_recall": 0.274,
+      "type_accuracy_strict": 0.294,
+      "type_accuracy_lenient": 0.412,
+      "evidence_verified": 0.702,
+      "failed_audits": 1,
+      "tool_calls_mean": 3.8,
+      "duration_s_mean": 12.4,
+      "tokens_per_trace": 12330,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.2,
+        "data_leak": 0.167,
+        "false_completion": 0.167,
+        "hallucinated_fact": 0.2,
+        "ignored_tool_error": 0.2,
+        "language_mismatch": 0.143,
+        "release_without_approval": 1.0,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.4,
+        "too_few_first_pieces": 0.0,
+        "wrong_order": 0.2,
+        "wrong_revision": 0.5,
+        "wrong_tool_args": 0.4
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.409,
+          "false_alarm_rate": 0.5
+        },
+        "en": {
+          "recall": 0.421,
+          "false_alarm_rate": 0.333
+        },
+        "fr": {
+          "recall": 0.5,
+          "false_alarm_rate": 0.591
+        },
+        "it": {
+          "recall": 0.333,
+          "false_alarm_rate": 0.0
+        }
+      }
+    },
+    {
+      "system": "B2 v3 8B + LoRA bf16 3 ep + analysis",
+      "traces": 124,
+      "error_traces": 62,
+      "balanced_accuracy": 0.484,
+      "strict_f1": 0.057,
+      "strict_precision": 0.25,
+      "strict_recall": 0.032,
+      "precision": 0.375,
+      "recall": 0.048,
+      "f1": 0.086,
+      "false_alarm_rate": 0.081,
+      "localisation_recall": 0.032,
+      "type_accuracy_strict": 0.5,
+      "type_accuracy_lenient": 0.5,
+      "evidence_verified": 0.75,
+      "failed_audits": 2,
+      "tool_calls_mean": 2.7,
+      "duration_s_mean": 13.2,
+      "tokens_per_trace": 8516,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.0,
+        "data_leak": 0.167,
+        "false_completion": 0.0,
+        "hallucinated_fact": 0.0,
+        "ignored_tool_error": 0.0,
+        "language_mismatch": 0.0,
+        "release_without_approval": 0.0,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.0,
+        "too_few_first_pieces": 1.0,
+        "wrong_order": 0.0,
+        "wrong_revision": 0.0,
+        "wrong_tool_args": 0.0
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.045,
+          "false_alarm_rate": 0.136
+        },
+        "en": {
+          "recall": 0.105,
+          "false_alarm_rate": 0.067
+        },
+        "fr": {
+          "recall": 0.0,
+          "false_alarm_rate": 0.045
+        },
+        "it": {
+          "recall": 0.0,
+          "false_alarm_rate": 0.0
+        }
+      }
+    }
+  ]
+}

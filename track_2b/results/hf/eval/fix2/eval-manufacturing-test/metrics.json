@@ -1,0 +1,114 @@
+{
+  "created": "2026-10-09T07:54:49+00:00",
+  "set": "/repo/sets/manufacturing-test",
+  "systems": [
+    {
+      "system": "B1 8B harness",
+      "traces": 132,
+      "error_traces": 66,
+      "balanced_accuracy": 0.5,
+      "strict_f1": 0.299,
+      "strict_precision": 0.294,
+      "strict_recall": 0.303,
+      "precision": 0.5,
+      "recall": 0.515,
+      "f1": 0.507,
+      "false_alarm_rate": 0.515,
+      "localisation_recall": 0.303,
+      "type_accuracy_strict": 0.4,
+      "type_accuracy_lenient": 0.55,
+      "evidence_verified": 0.449,
+      "failed_audits": 11,
+      "tool_calls_mean": 4.4,
+      "duration_s_mean": 31.1,
+      "tokens_per_trace": 16653,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.2,
+        "data_leak": 0.167,
+        "false_completion": 0.0,
+        "hallucinated_fact": 0.333,
+        "ignored_tool_error": 0.667,
+        "language_mismatch": 0.2,
+        "release_without_approval": 1.0,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.6,
+        "too_few_first_pieces": 0.0,
+        "wrong_order": 0.6,
+        "wrong_revision": 0.0,
+        "wrong_tool_args": 0.0
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.5,
+          "false_alarm_rate": 0.567
+        },
+        "en": {
+          "recall": 0.5,
+          "false_alarm_rate": 0.529
+        },
+        "fr": {
+          "recall": 0.5,
+          "false_alarm_rate": 0.273
+        },
+        "it": {
+          "recall": 0.6,
+          "false_alarm_rate": 0.625
+        }
+      }
+    },
+    {
+      "system": "B2 v2 8B + LoRA bf16 3 ep",
+      "traces": 132,
+      "error_traces": 66,
+      "balanced_accuracy": 0.424,
+      "strict_f1": 0.231,
+      "strict_precision": 0.234,
+      "strict_recall": 0.227,
+      "precision": 0.422,
+      "recall": 0.409,
+      "f1": 0.415,
+      "false_alarm_rate": 0.561,
+      "localisation_recall": 0.227,
+      "type_accuracy_strict": 0.2,
+      "type_accuracy_lenient": 0.533,
+      "evidence_verified": 0.765,
+      "failed_audits": 1,
+      "tool_calls_mean": 3.6,
+      "duration_s_mean": 12.2,
+      "tokens_per_trace": 11103,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.0,
+        "data_leak": 0.0,
+        "false_completion": 0.0,
+        "hallucinated_fact": 0.333,
+        "ignored_tool_error": 0.5,
+        "language_mismatch": 0.2,
+        "release_without_approval": 0.6,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.4,
+        "too_few_first_pieces": 0.0,
+        "wrong_order": 0.6,
+        "wrong_revision": 0.0,
+        "wrong_tool_args": 0.167
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.417,
+          "false_alarm_rate": 0.567
+        },
+        "en": {
+          "recall": 0.5,
+          "false_alarm_rate": 0.588
+        },
+        "fr": {
+          "recall": 0.444,
+          "false_alarm_rate": 0.545
+        },
+        "it": {
+          "recall": 0.2,
+          "false_alarm_rate": 0.5
+        }
+      }
+    }
+  ]
+}

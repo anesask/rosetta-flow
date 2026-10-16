@@ -1,0 +1,165 @@
+{
+  "created": "2026-10-09T19:00:54+00:00",
+  "set": "data\\sets\\refunds-dev",
+  "tiers": {
+    "traces": 120,
+    "escalated_to_confirmer": 61,
+    "escalated_share": 0.508,
+    "confirmer_tokens_used": 696471,
+    "confirmer_tokens_if_alone": 1509438,
+    "confirmer_token_share": 0.461,
+    "screener_tokens": 1729089
+  },
+  "systems": [
+    {
+      "system": "B1",
+      "traces": 120,
+      "error_traces": 60,
+      "balanced_accuracy": 0.658,
+      "strict_f1": 0.479,
+      "strict_precision": 0.491,
+      "strict_recall": 0.467,
+      "precision": 0.667,
+      "recall": 0.633,
+      "f1": 0.65,
+      "false_alarm_rate": 0.317,
+      "localisation_recall": 0.467,
+      "type_accuracy_strict": 0.536,
+      "type_accuracy_lenient": 0.643,
+      "evidence_verified": 0.662,
+      "failed_audits": 5,
+      "tool_calls_mean": 4.1,
+      "duration_s_mean": 27.2,
+      "tokens_per_trace": 14409,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.429,
+        "false_completion": 0.5,
+        "hallucinated_fact": 0.125,
+        "ignored_tool_error": 0.571,
+        "language_mismatch": 0.667,
+        "skipped_required_step": 1.0,
+        "voucher_over_limit": 0.5,
+        "wrong_order": 0.333,
+        "wrong_tool_args": 0.167
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.579,
+          "false_alarm_rate": 0.435
+        },
+        "en": {
+          "recall": 0.833,
+          "false_alarm_rate": 0.333
+        },
+        "fr": {
+          "recall": 0.625,
+          "false_alarm_rate": 0.118
+        },
+        "it": {
+          "recall": 0.286,
+          "false_alarm_rate": 0.4
+        }
+      }
+    },
+    {
+      "system": "audit70B",
+      "traces": 120,
+      "error_traces": 60,
+      "balanced_accuracy": 0.683,
+      "strict_f1": 0.597,
+      "strict_precision": 0.512,
+      "strict_recall": 0.717,
+      "precision": 0.631,
+      "recall": 0.883,
+      "f1": 0.736,
+      "false_alarm_rate": 0.517,
+      "localisation_recall": 0.717,
+      "type_accuracy_strict": 0.512,
+      "type_accuracy_lenient": 0.674,
+      "evidence_verified": 0.893,
+      "failed_audits": 2,
+      "tool_calls_mean": 3.8,
+      "duration_s_mean": 22.1,
+      "tokens_per_trace": 12579,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.857,
+        "false_completion": 0.75,
+        "hallucinated_fact": 0.625,
+        "ignored_tool_error": 0.857,
+        "language_mismatch": 0.333,
+        "skipped_required_step": 1.0,
+        "voucher_over_limit": 0.667,
+        "wrong_order": 0.833,
+        "wrong_tool_args": 0.5
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.895,
+          "false_alarm_rate": 0.522
+        },
+        "en": {
+          "recall": 0.944,
+          "false_alarm_rate": 0.533
+        },
+        "fr": {
+          "recall": 0.875,
+          "false_alarm_rate": 0.529
+        },
+        "it": {
+          "recall": 0.714,
+          "false_alarm_rate": 0.4
+        }
+      }
+    },
+    {
+      "system": "B1 screens, audit70B confirms",
+      "traces": 120,
+      "error_traces": 60,
+      "balanced_accuracy": 0.733,
+      "strict_f1": 0.6,
+      "strict_precision": 0.66,
+      "strict_recall": 0.55,
+      "precision": 0.78,
+      "recall": 0.65,
+      "f1": 0.709,
+      "false_alarm_rate": 0.183,
+      "localisation_recall": 0.55,
+      "type_accuracy_strict": 0.576,
+      "type_accuracy_lenient": 0.727,
+      "evidence_verified": 0.92,
+      "failed_audits": 0,
+      "tool_calls_mean": 5.9,
+      "duration_s_mean": 39.9,
+      "tokens_per_trace": 20213,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.429,
+        "false_completion": 0.625,
+        "hallucinated_fact": 0.375,
+        "ignored_tool_error": 0.571,
+        "language_mismatch": 0.333,
+        "skipped_required_step": 1.0,
+        "voucher_over_limit": 0.667,
+        "wrong_order": 0.667,
+        "wrong_tool_args": 0.333
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.474,
+          "false_alarm_rate": 0.261
+        },
+        "en": {
+          "recall": 0.889,
+          "false_alarm_rate": 0.2
+        },
+        "fr": {
+          "recall": 0.688,
+          "false_alarm_rate": 0.059
+        },
+        "it": {
+          "recall": 0.429,
+          "false_alarm_rate": 0.2
+        }
+      }
+    }
+  ]
+}

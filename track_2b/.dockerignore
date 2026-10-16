@@ -1,0 +1,20 @@
+.env
+.env.*
+.venv/
+**/__pycache__/
+**/*.py[cod]
+.pytest_cache/
+.ruff_cache/
+results/
+docs/
+*.safetensors
+*.gguf
+*.bin
+*.pt
+# Only data/demo is needed at runtime; generated and training data stay out of the image
+data/gold/
+data/kaggle/
+data/sft/
+data/sim/
+data/sets/
+reviews/

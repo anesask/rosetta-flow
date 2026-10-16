@@ -1,0 +1,43 @@
+{
+  "created": "2026-10-09T05:57:07+00:00",
+  "traces_file": "/repo/sets/manufacturing-dev/traces.jsonl",
+  "model": "base",
+  "mode": "investigate",
+  "variant": "default",
+  "audited": 124,
+  "failures": [],
+  "stopped_by_budget": false,
+  "no_report": {
+    "unparseable_tool_calls": 3,
+    "tool_call_limit": 4,
+    "bad_request: Error code: 400 - {'error': {'message': \"This model's maximum context length is 16384 tokens. However, you requested 2000 output tokens and your prompt contains at least 14385 input tokens, for a tota": 1,
+    "no_report": 2
+  },
+  "verdicts": {
+    "ok": 72,
+    "issues_found": 42
+  },
+  "findings_by_type": {
+    "wrong_order": 3,
+    "hallucinated_fact": 11,
+    "ignored_tool_error": 18,
+    "contradicts_tool_result": 7,
+    "wrong_tool_args": 4,
+    "policy_violation": 6,
+    "skipped_required_step": 15,
+    "false_completion": 2,
+    "wrong_tool": 1,
+    "data_leak": 1
+  },
+  "evidence_verified_rate": 0.471,
+  "tool_calls_mean": 4.2,
+  "duration_s_mean": 31.6,
+  "tokens": {
+    "prompt": 1962850,
+    "completion": 209285,
+    "per_trace": 17517,
+    "this_invocation": 2172135
+  },
+  "cost_chf": null,
+  "chf_per_1000_traces": null
+}

@@ -1,0 +1,141 @@
+{
+  "reviewer": "author, blind to task outcome",
+  "flags": 20,
+  "real": 8,
+  "precision": 0.4,
+  "wilson_95": [
+    0.22,
+    0.61
+  ],
+  "failed_tasks": {
+    "real": 5,
+    "of": 10
+  },
+  "solved_tasks": {
+    "real": 3,
+    "of": 10
+  },
+  "false_alarms_with_other_real_error": 7,
+  "reviews": [
+    {
+      "trace_id": "tau-airline-gpt-4o-t002-r1",
+      "decision": "false_alarm",
+      "task_failed": true,
+      "other_real_error_noted": true
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t003-r3",
+      "decision": "real",
+      "task_failed": true,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t005-r1",
+      "decision": "false_alarm",
+      "task_failed": false,
+      "other_real_error_noted": true
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t006-r2",
+      "decision": "false_alarm",
+      "task_failed": true,
+      "other_real_error_noted": true
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t010-r2",
+      "decision": "false_alarm",
+      "task_failed": true,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t013-r0",
+      "decision": "real",
+      "task_failed": true,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t015-r1",
+      "decision": "real",
+      "task_failed": true,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t017-r1",
+      "decision": "false_alarm",
+      "task_failed": true,
+      "other_real_error_noted": true
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t020-r3",
+      "decision": "real",
+      "task_failed": false,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t021-r1",
+      "decision": "false_alarm",
+      "task_failed": false,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t027-r3",
+      "decision": "false_alarm",
+      "task_failed": true,
+      "other_real_error_noted": true
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t029-r2",
+      "decision": "real",
+      "task_failed": true,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t032-r0",
+      "decision": "real",
+      "task_failed": true,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t034-r1",
+      "decision": "real",
+      "task_failed": false,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t034-r3",
+      "decision": "real",
+      "task_failed": false,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t035-r2",
+      "decision": "false_alarm",
+      "task_failed": false,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t036-r1",
+      "decision": "false_alarm",
+      "task_failed": false,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t042-r3",
+      "decision": "false_alarm",
+      "task_failed": false,
+      "other_real_error_noted": false
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t045-r0",
+      "decision": "false_alarm",
+      "task_failed": false,
+      "other_real_error_noted": true
+    },
+    {
+      "trace_id": "tau-airline-gpt-4o-t045-r3",
+      "decision": "false_alarm",
+      "task_failed": false,
+      "other_real_error_noted": true
+    }
+  ]
+}

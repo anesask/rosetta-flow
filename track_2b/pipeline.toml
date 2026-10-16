@@ -1,0 +1,20 @@
+# rosetta-flow pipeline: which models audit, and which optional components are on.
+# Endpoint and key come from LLM_BASE_URL / LLM_API_KEY; a tier can point at its own server with base_url
+# (on-prem: the 8B and the 70B usually run on different machines).
+
+[screener]                      # tier 1: audits every run
+model = "swiss-ai/Apertus-v1.5-8B"
+# base_url = "http://gpu-small:8000/v1"
+
+[confirmer]                     # tier 2: re-audits what the screener hands on; remove this table for one tier
+model = "swiss-ai/Apertus-v1.5-70B"
+# base_url = "http://gpu-large:8000/v1"
+mode = "audit"                  # "audit": investigate again with tools; "verify": check the screener's findings in
+                                # one prompt (no tools; works with swiss-ai/Apertus-v1.5-70B-thinking too)
+
+[options]
+escalate_on = ["flagged", "failed"]  # flagged: screener found an issue; failed: screener produced no report
+bookmarks = false                    # screener bookmarks suspicious spans while it investigates
+handoff = false                      # confirmer starts from those bookmarks (needs bookmarks = true)
+review = false                       # findings wait for a human decision before they count as confirmed
+screener_max_tokens = 40000          # a screener stuck in a loop stops and escalates (0 = no cap)

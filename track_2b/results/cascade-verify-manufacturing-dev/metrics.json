@@ -1,0 +1,231 @@
+{
+  "created": "2026-10-09T19:00:56+00:00",
+  "set": "data\\sets\\manufacturing-dev",
+  "tiers": {
+    "traces": 124,
+    "escalated_to_confirmer": 62,
+    "escalated_share": 0.5,
+    "confirmer_tokens_used": 167031,
+    "confirmer_tokens_if_alone": 167031,
+    "confirmer_token_share": 1.0,
+    "screener_tokens": 2269863
+  },
+  "systems": [
+    {
+      "system": "B3-alone",
+      "traces": 124,
+      "error_traces": 62,
+      "balanced_accuracy": 0.685,
+      "strict_f1": 0.541,
+      "strict_precision": 0.507,
+      "strict_recall": 0.581,
+      "precision": 0.662,
+      "recall": 0.758,
+      "f1": 0.707,
+      "false_alarm_rate": 0.387,
+      "localisation_recall": 0.581,
+      "type_accuracy_strict": 0.361,
+      "type_accuracy_lenient": 0.611,
+      "evidence_verified": 0.842,
+      "failed_audits": 1,
+      "tool_calls_mean": 3.8,
+      "duration_s_mean": 17.8,
+      "tokens_per_trace": 13264,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.2,
+        "data_leak": 0.833,
+        "false_completion": 0.833,
+        "hallucinated_fact": 0.8,
+        "ignored_tool_error": 1.0,
+        "language_mismatch": 0.143,
+        "release_without_approval": 1.0,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.8,
+        "too_few_first_pieces": 0.0,
+        "wrong_order": 0.2,
+        "wrong_revision": 0.0,
+        "wrong_tool_args": 1.0
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.727,
+          "false_alarm_rate": 0.273
+        },
+        "en": {
+          "recall": 0.632,
+          "false_alarm_rate": 0.333
+        },
+        "fr": {
+          "recall": 0.917,
+          "false_alarm_rate": 0.545
+        },
+        "it": {
+          "recall": 0.889,
+          "false_alarm_rate": 0.333
+        }
+      }
+    },
+    {
+      "system": "B1",
+      "traces": 124,
+      "error_traces": 62,
+      "balanced_accuracy": 0.589,
+      "strict_f1": 0.264,
+      "strict_precision": 0.271,
+      "strict_recall": 0.258,
+      "precision": 0.593,
+      "recall": 0.565,
+      "f1": 0.579,
+      "false_alarm_rate": 0.387,
+      "localisation_recall": 0.258,
+      "type_accuracy_strict": 0.312,
+      "type_accuracy_lenient": 0.625,
+      "evidence_verified": 0.474,
+      "failed_audits": 8,
+      "tool_calls_mean": 4.5,
+      "duration_s_mean": 33.3,
+      "tokens_per_trace": 18305,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.2,
+        "data_leak": 0.167,
+        "false_completion": 0.333,
+        "hallucinated_fact": 0.4,
+        "ignored_tool_error": 0.2,
+        "language_mismatch": 0.143,
+        "release_without_approval": 1.0,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.2,
+        "too_few_first_pieces": 0.0,
+        "wrong_order": 0.4,
+        "wrong_revision": 0.0,
+        "wrong_tool_args": 0.0
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.636,
+          "false_alarm_rate": 0.273
+        },
+        "en": {
+          "recall": 0.474,
+          "false_alarm_rate": 0.333
+        },
+        "fr": {
+          "recall": 0.667,
+          "false_alarm_rate": 0.5
+        },
+        "it": {
+          "recall": 0.444,
+          "false_alarm_rate": 0.667
+        }
+      }
+    },
+    {
+      "system": "verify70B",
+      "traces": 124,
+      "error_traces": 62,
+      "balanced_accuracy": 0.347,
+      "strict_f1": 0.238,
+      "strict_precision": 0.21,
+      "strict_recall": 0.274,
+      "precision": 0.383,
+      "recall": 0.5,
+      "f1": 0.434,
+      "false_alarm_rate": 0.806,
+      "localisation_recall": 0.274,
+      "type_accuracy_strict": 0.353,
+      "type_accuracy_lenient": 0.588,
+      "evidence_verified": 0.561,
+      "failed_audits": 62,
+      "tool_calls_mean": 0.0,
+      "duration_s_mean": 3.6,
+      "tokens_per_trace": 2694,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.2,
+        "data_leak": 0.333,
+        "false_completion": 0.5,
+        "hallucinated_fact": 0.4,
+        "ignored_tool_error": 0.2,
+        "language_mismatch": 0.143,
+        "release_without_approval": 1.0,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.2,
+        "too_few_first_pieces": 0.0,
+        "wrong_order": 0.2,
+        "wrong_revision": 0.0,
+        "wrong_tool_args": 0.0
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.591,
+          "false_alarm_rate": 0.864
+        },
+        "en": {
+          "recall": 0.421,
+          "false_alarm_rate": 0.8
+        },
+        "fr": {
+          "recall": 0.5,
+          "false_alarm_rate": 0.773
+        },
+        "it": {
+          "recall": 0.444,
+          "false_alarm_rate": 0.667
+        }
+      }
+    },
+    {
+      "system": "B1 screens, verify70B confirms",
+      "traces": 124,
+      "error_traces": 62,
+      "balanced_accuracy": 0.653,
+      "strict_f1": 0.324,
+      "strict_precision": 0.395,
+      "strict_recall": 0.274,
+      "precision": 0.721,
+      "recall": 0.5,
+      "f1": 0.59,
+      "false_alarm_rate": 0.194,
+      "localisation_recall": 0.274,
+      "type_accuracy_strict": 0.353,
+      "type_accuracy_lenient": 0.588,
+      "evidence_verified": 0.561,
+      "failed_audits": 0,
+      "tool_calls_mean": 4.5,
+      "duration_s_mean": 35.0,
+      "tokens_per_trace": 19652,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.2,
+        "data_leak": 0.333,
+        "false_completion": 0.5,
+        "hallucinated_fact": 0.4,
+        "ignored_tool_error": 0.2,
+        "language_mismatch": 0.143,
+        "release_without_approval": 1.0,
+        "scope_too_small": 0.0,
+        "skipped_required_step": 0.2,
+        "too_few_first_pieces": 0.0,
+        "wrong_order": 0.2,
+        "wrong_revision": 0.0,
+        "wrong_tool_args": 0.0
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.591,
+          "false_alarm_rate": 0.136
+        },
+        "en": {
+          "recall": 0.421,
+          "false_alarm_rate": 0.133
+        },
+        "fr": {
+          "recall": 0.5,
+          "false_alarm_rate": 0.273
+        },
+        "it": {
+          "recall": 0.444,
+          "false_alarm_rate": 0.333
+        }
+      }
+    }
+  ]
+}

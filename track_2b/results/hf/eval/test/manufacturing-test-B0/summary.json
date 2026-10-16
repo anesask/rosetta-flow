@@ -1,0 +1,39 @@
+{
+  "created": "2026-10-08T21:54:48+00:00",
+  "traces_file": "/repo/sets/manufacturing-test/traces.jsonl",
+  "model": "base",
+  "mode": "single",
+  "variant": "default",
+  "audited": 132,
+  "failures": [],
+  "stopped_by_budget": false,
+  "no_report": {
+    "invalid_report": 3,
+    "no_report": 1
+  },
+  "verdicts": {
+    "issues_found": 118,
+    "ok": 10
+  },
+  "findings_by_type": {
+    "wrong_tool_args": 11,
+    "contradicts_tool_result": 55,
+    "false_completion": 11,
+    "policy_violation": 3,
+    "wrong_order": 10,
+    "ignored_tool_error": 36,
+    "hallucinated_fact": 3,
+    "data_leak": 1
+  },
+  "evidence_verified_rate": 0.215,
+  "tool_calls_mean": 0.0,
+  "duration_s_mean": 4.1,
+  "tokens": {
+    "prompt": 290533,
+    "completion": 27270,
+    "per_trace": 2408,
+    "this_invocation": 317803
+  },
+  "cost_chf": null,
+  "chf_per_1000_traces": null
+}

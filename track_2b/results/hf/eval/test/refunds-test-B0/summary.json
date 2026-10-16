@@ -1,0 +1,36 @@
+{
+  "created": "2026-10-08T21:46:45+00:00",
+  "traces_file": "/repo/sets/refunds-test/traces.jsonl",
+  "model": "base",
+  "mode": "single",
+  "variant": "default",
+  "audited": 130,
+  "failures": [],
+  "stopped_by_budget": false,
+  "no_report": {
+    "invalid_report": 1
+  },
+  "verdicts": {
+    "issues_found": 128,
+    "ok": 1
+  },
+  "findings_by_type": {
+    "contradicts_tool_result": 112,
+    "ignored_tool_error": 12,
+    "wrong_order": 7,
+    "wrong_tool_args": 4,
+    "policy_violation": 2,
+    "wrong_tool": 5
+  },
+  "evidence_verified_rate": 0.246,
+  "tool_calls_mean": 0.0,
+  "duration_s_mean": 3.5,
+  "tokens": {
+    "prompt": 239657,
+    "completion": 22693,
+    "per_trace": 2018,
+    "this_invocation": 262350
+  },
+  "cost_chf": null,
+  "chf_per_1000_traces": null
+}

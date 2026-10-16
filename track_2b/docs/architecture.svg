@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">rosetta-flow architecture</title>
+  <desc id="d">Build time: simulated agent runs with injected errors, reference investigations, experiments and the scoreboard. Runtime: the 8B screener audits every run, flagged or failed runs go to the 70B confirmer, findings with verified evidence go to human review.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4a5560"/>
+    </marker>
+    <style>
+      .band { fill: #f4f6f3; stroke: #d9ded8; }
+      .band2 { fill: #eef3fb; stroke: #cfdbef; }
+      .h { font-size: 15px; font-weight: 700; fill: #1b2229; letter-spacing: .04em; }
+      .hs { font-size: 13px; fill: #5d666e; }
+      .box { fill: #ffffff; stroke: #9aa5ae; stroke-width: 1.2; }
+      .key { fill: #ffffff; stroke: #2a5bd7; stroke-width: 2; }
+      .big { fill: #ffffff; stroke: #c4372d; stroke-width: 2; }
+      .ok { fill: #e6f4ec; stroke: #1f7a4d; stroke-width: 1.4; }
+      .t { font-size: 14px; font-weight: 700; fill: #1b2229; }
+      .s { font-size: 12px; fill: #4a5560; }
+      .m { font-size: 11.5px; fill: #5d666e; font-style: italic; }
+      .ln { stroke: #4a5560; stroke-width: 1.6; fill: none; marker-end: url(#a); }
+      .lbl { font-size: 12px; fill: #1b2229; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- BUILD TIME -->
+  <rect class="band" x="10" y="10" width="1180" height="230" rx="12"/>
+  <text class="h" x="30" y="40">BUILD TIME</text>
+  <text class="hs" x="140" y="40">online, once · CSCS API (Apertus 70B, 8B) · Hugging Face Jobs (A100)</text>
+
+  <rect class="box" x="30" y="62" width="170" height="104" rx="8"/>
+  <text class="t" x="44" y="86">Simulator</text>
+  <text class="s" x="44" y="106">code decides each action</text>
+  <text class="s" x="44" y="122">Apertus 70B writes words</text>
+  <text class="s" x="44" y="138">Python tools, simulated systems</text>
+  <text class="s" x="44" y="154">refunds · manufacturing</text>
+
+  <rect class="box" x="226" y="62" width="170" height="104" rx="8"/>
+  <text class="t" x="240" y="86">Error injectors</text>
+  <text class="s" x="240" y="106">change exactly one thing</text>
+  <text class="s" x="240" y="122">record the broken steps</text>
+  <text class="s" x="240" y="138">11 error types, exact labels</text>
+  <text class="s" x="240" y="154">half the runs stay clean</text>
+
+  <rect class="box" x="422" y="62" width="170" height="104" rx="8"/>
+  <text class="t" x="436" y="86">Splits</text>
+  <text class="s" x="436" y="106">train 829 · dev 244</text>
+  <text class="s" x="436" y="122">test 262 (final numbers only)</text>
+  <text class="s" x="436" y="138">de · fr · it · en</text>
+  <text class="s" x="436" y="154">own seeds per split</text>
+
+  <rect class="box" x="618" y="62" width="170" height="104" rx="8"/>
+  <text class="t" x="632" y="86">Reference runs</text>
+  <text class="s" x="632" y="106">70B investigates train runs</text>
+  <text class="s" x="632" y="122">kept only if they match</text>
+  <text class="s" x="632" y="138">the label (557 of 829)</text>
+
+  <rect class="box" x="814" y="62" width="170" height="104" rx="8"/>
+  <text class="t" x="828" y="86">Experiments</text>
+  <text class="s" x="828" y="106">LoRA SFT on the 8B (v1-v3)</text>
+  <text class="s" x="828" y="122">GRPO fast screener</text>
+  <text class="m" x="828" y="146">reported, not in the</text>
+  <text class="m" x="828" y="160">final pipeline</text>
+
+  <rect class="box" x="1010" y="62" width="165" height="104" rx="8"/>
+  <text class="t" x="1024" y="86">Scoreboard</text>
+  <text class="s" x="1024" y="106">B0-B3 and two tiers</text>
+  <text class="s" x="1024" y="122">tau-bench (foreign agent)</text>
+  <text class="s" x="1024" y="138">offline proof</text>
+
+  <path class="ln" d="M200 114 H222"/>
+  <path class="ln" d="M396 114 H418"/>
+  <path class="ln" d="M592 114 H614"/>
+  <path class="ln" d="M788 114 H810"/>
+  <path class="ln" d="M984 114 H1006"/>
+  <text class="m" x="30" y="200">Labels come from code, never from a judge model. Weights are downloaded once; nothing from this half is needed at runtime.</text>
+  <text class="m" x="30" y="220">Dataset, adapters and score tables are published, so every number can be checked.</text>
+
+  <!-- RUNTIME -->
+  <rect class="band2" x="10" y="256" width="1180" height="374" rx="12"/>
+  <text class="h" x="30" y="286">RUNTIME</text>
+  <text class="hs" x="122" y="286">inside your network · no internet needed (measured) · one container + your model servers</text>
+
+  <rect class="box" x="30" y="318" width="160" height="112" rx="8"/>
+  <text class="t" x="44" y="342">Agent runs</text>
+  <text class="s" x="44" y="362">messages, tool calls,</text>
+  <text class="s" x="44" y="378">tool results (JSON)</text>
+  <text class="s" x="44" y="398">+ the company policy</text>
+  <text class="m" x="44" y="418">any agent, any language</text>
+
+  <rect class="key" x="222" y="318" width="236" height="112" rx="8"/>
+  <text class="t" x="238" y="342">Screener · Apertus 8B</text>
+  <text class="s" x="238" y="362">audits every run like a code repo:</text>
+  <text class="s" x="238" y="378">read_spans · search · report</text>
+  <text class="s" x="238" y="398">one A100: ~1,700 runs / hour</text>
+  <text class="m" x="238" y="418">token cap: a looping audit escalates</text>
+
+  <rect class="box" x="490" y="340" width="128" height="68" rx="34"/>
+  <text class="t" x="520" y="370">Escalate?</text>
+  <text class="s" x="507" y="390">flagged or failed</text>
+
+  <rect class="big" x="650" y="318" width="236" height="112" rx="8"/>
+  <text class="t" x="666" y="342">Confirmer · Apertus 70B</text>
+  <text class="s" x="666" y="362">investigates the run again,</text>
+  <text class="s" x="666" y="378">its verdict is final</text>
+  <text class="s" x="666" y="398">sees ~56 % of the runs</text>
+  <text class="m" x="666" y="418">two 80 GB GPUs</text>
+
+  <rect class="box" x="918" y="318" width="252" height="112" rx="8"/>
+  <text class="t" x="934" y="342">Findings</text>
+  <text class="s" x="934" y="362">error type · steps · severity</text>
+  <text class="s" x="934" y="378">quotes checked by code: they must</text>
+  <text class="s" x="934" y="394">appear verbatim in the cited steps</text>
+  <text class="m" x="934" y="416">two tiers: half the 70B's false alarms</text>
+
+  <rect class="ok" x="468" y="468" width="172" height="62" rx="8"/>
+  <text class="t" x="484" y="492">Cleared: OK</text>
+  <text class="s" x="484" y="512">no 70B needed (~44 %)</text>
+
+  <rect class="box" x="918" y="468" width="252" height="80" rx="8"/>
+  <text class="t" x="934" y="492">Human review</text>
+  <text class="s" x="934" y="512">confirm · false alarm · follow-up</text>
+  <text class="s" x="934" y="530">hash-chained trail: edits show</text>
+
+  <path class="ln" d="M190 374 H218"/>
+  <path class="ln" d="M458 374 H486"/>
+  <path class="ln" d="M618 374 H646"/>
+  <text class="lbl" x="620" y="364">yes</text>
+  <path class="ln" d="M554 408 V464"/>
+  <text class="lbl" x="562" y="444">no</text>
+  <path class="ln" d="M886 374 H914"/>
+  <path class="ln" d="M1044 430 V464"/>
+
+  <rect x="30" y="566" width="1140" height="48" rx="8" fill="#ffffff" stroke="#cfdbef"/>
+  <text class="s" x="46" y="586">Every audit: trace text fenced as data against prompt injection · reports accepted only if schema-valid, grounded in opened steps and quoted verbatim</text>
+  <text class="s" x="46" y="604">Configured in pipeline.toml (models, servers, escalation rule, optional bookmarks, handoff, review) · web app and CLI on the same pipeline</text>
+</svg>

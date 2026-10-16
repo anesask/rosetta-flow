@@ -1,0 +1,2 @@
+  lo     rx    298216 B  tx    298216 B  (69 s, rx 4322 B/s, tx 4322 B/s)
+  eth0   rx     33231 B  tx      2110 B  (69 s, rx 482 B/s, tx 31 B/s)

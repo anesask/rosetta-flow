@@ -1,0 +1,106 @@
+{
+  "created": "2026-10-09T07:30:01+00:00",
+  "set": "/repo/sets/refunds-dev",
+  "systems": [
+    {
+      "system": "B1 8B harness",
+      "traces": 120,
+      "error_traces": 60,
+      "balanced_accuracy": 0.658,
+      "strict_f1": 0.479,
+      "strict_precision": 0.491,
+      "strict_recall": 0.467,
+      "precision": 0.667,
+      "recall": 0.633,
+      "f1": 0.65,
+      "false_alarm_rate": 0.317,
+      "localisation_recall": 0.467,
+      "type_accuracy_strict": 0.536,
+      "type_accuracy_lenient": 0.643,
+      "evidence_verified": 0.662,
+      "failed_audits": 5,
+      "tool_calls_mean": 4.1,
+      "duration_s_mean": 27.2,
+      "tokens_per_trace": 14409,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.429,
+        "false_completion": 0.5,
+        "hallucinated_fact": 0.125,
+        "ignored_tool_error": 0.571,
+        "language_mismatch": 0.667,
+        "skipped_required_step": 1.0,
+        "voucher_over_limit": 0.5,
+        "wrong_order": 0.333,
+        "wrong_tool_args": 0.167
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.579,
+          "false_alarm_rate": 0.435
+        },
+        "en": {
+          "recall": 0.833,
+          "false_alarm_rate": 0.333
+        },
+        "fr": {
+          "recall": 0.625,
+          "false_alarm_rate": 0.118
+        },
+        "it": {
+          "recall": 0.286,
+          "false_alarm_rate": 0.4
+        }
+      }
+    },
+    {
+      "system": "B2 v2 8B + LoRA bf16 3 ep",
+      "traces": 120,
+      "error_traces": 60,
+      "balanced_accuracy": 0.592,
+      "strict_f1": 0.489,
+      "strict_precision": 0.43,
+      "strict_recall": 0.567,
+      "precision": 0.57,
+      "recall": 0.75,
+      "f1": 0.647,
+      "false_alarm_rate": 0.567,
+      "localisation_recall": 0.567,
+      "type_accuracy_strict": 0.382,
+      "type_accuracy_lenient": 0.735,
+      "evidence_verified": 0.775,
+      "failed_audits": 4,
+      "tool_calls_mean": 3.7,
+      "duration_s_mean": 13.9,
+      "tokens_per_trace": 11076,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.429,
+        "false_completion": 0.375,
+        "hallucinated_fact": 0.0,
+        "ignored_tool_error": 0.571,
+        "language_mismatch": 0.5,
+        "skipped_required_step": 0.833,
+        "voucher_over_limit": 0.833,
+        "wrong_order": 1.0,
+        "wrong_tool_args": 0.833
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.842,
+          "false_alarm_rate": 0.478
+        },
+        "en": {
+          "recall": 0.722,
+          "false_alarm_rate": 0.8
+        },
+        "fr": {
+          "recall": 0.688,
+          "false_alarm_rate": 0.588
+        },
+        "it": {
+          "recall": 0.714,
+          "false_alarm_rate": 0.2
+        }
+      }
+    }
+  ]
+}

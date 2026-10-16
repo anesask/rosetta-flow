@@ -1,0 +1,156 @@
+{
+  "created": "2026-10-08T21:53:27+00:00",
+  "set": "/repo/sets/refunds-test",
+  "systems": [
+    {
+      "system": "B0 8B single prompt",
+      "traces": 130,
+      "error_traces": 65,
+      "balanced_accuracy": 0.5,
+      "strict_f1": 0.197,
+      "strict_precision": 0.148,
+      "strict_recall": 0.292,
+      "precision": 0.5,
+      "recall": 0.985,
+      "f1": 0.663,
+      "false_alarm_rate": 0.985,
+      "localisation_recall": 0.292,
+      "type_accuracy_strict": 0.263,
+      "type_accuracy_lenient": 0.368,
+      "evidence_verified": 0.246,
+      "failed_audits": 1,
+      "tool_calls_mean": 0.0,
+      "duration_s_mean": 3.5,
+      "tokens_per_trace": 2018,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.286,
+        "false_completion": 0.25,
+        "hallucinated_fact": 0.111,
+        "ignored_tool_error": 0.571,
+        "language_mismatch": 0.3,
+        "skipped_required_step": 0.5,
+        "voucher_over_limit": 0.0,
+        "wrong_order": 0.167,
+        "wrong_tool_args": 0.5
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.957,
+          "false_alarm_rate": 1.0
+        },
+        "en": {
+          "recall": 1.0,
+          "false_alarm_rate": 1.0
+        },
+        "fr": {
+          "recall": 1.0,
+          "false_alarm_rate": 0.933
+        },
+        "it": {
+          "recall": 1.0,
+          "false_alarm_rate": 1.0
+        }
+      }
+    },
+    {
+      "system": "B1 8B harness",
+      "traces": 130,
+      "error_traces": 65,
+      "balanced_accuracy": 0.623,
+      "strict_f1": 0.412,
+      "strict_precision": 0.409,
+      "strict_recall": 0.415,
+      "precision": 0.621,
+      "recall": 0.631,
+      "f1": 0.626,
+      "false_alarm_rate": 0.385,
+      "localisation_recall": 0.415,
+      "type_accuracy_strict": 0.519,
+      "type_accuracy_lenient": 0.593,
+      "evidence_verified": 0.639,
+      "failed_audits": 5,
+      "tool_calls_mean": 3.2,
+      "duration_s_mean": 18.7,
+      "tokens_per_trace": 9792,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.429,
+        "false_completion": 0.5,
+        "hallucinated_fact": 0.0,
+        "ignored_tool_error": 0.571,
+        "language_mismatch": 0.4,
+        "skipped_required_step": 0.667,
+        "voucher_over_limit": 0.667,
+        "wrong_order": 0.333,
+        "wrong_tool_args": 0.333
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.522,
+          "false_alarm_rate": 0.433
+        },
+        "en": {
+          "recall": 0.684,
+          "false_alarm_rate": 0.182
+        },
+        "fr": {
+          "recall": 0.643,
+          "false_alarm_rate": 0.4
+        },
+        "it": {
+          "recall": 0.778,
+          "false_alarm_rate": 0.444
+        }
+      }
+    },
+    {
+      "system": "B2 v2 8B + LoRA bf16 3 ep",
+      "traces": 130,
+      "error_traces": 65,
+      "balanced_accuracy": 0.638,
+      "strict_f1": 0.456,
+      "strict_precision": 0.405,
+      "strict_recall": 0.523,
+      "precision": 0.607,
+      "recall": 0.785,
+      "f1": 0.685,
+      "false_alarm_rate": 0.508,
+      "localisation_recall": 0.523,
+      "type_accuracy_strict": 0.353,
+      "type_accuracy_lenient": 0.676,
+      "evidence_verified": 0.775,
+      "failed_audits": 0,
+      "tool_calls_mean": 3.4,
+      "duration_s_mean": 11.2,
+      "tokens_per_trace": 9234,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.0,
+        "false_completion": 0.5,
+        "hallucinated_fact": 0.0,
+        "ignored_tool_error": 0.857,
+        "language_mismatch": 0.3,
+        "skipped_required_step": 1.0,
+        "voucher_over_limit": 0.667,
+        "wrong_order": 1.0,
+        "wrong_tool_args": 0.833
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.696,
+          "false_alarm_rate": 0.467
+        },
+        "en": {
+          "recall": 0.842,
+          "false_alarm_rate": 0.727
+        },
+        "fr": {
+          "recall": 0.714,
+          "false_alarm_rate": 0.4
+        },
+        "it": {
+          "recall": 1.0,
+          "false_alarm_rate": 0.556
+        }
+      }
+    }
+  ]
+}

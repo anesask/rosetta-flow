@@ -1,0 +1,165 @@
+{
+  "created": "2026-10-09T07:55:55+00:00",
+  "set": "data\\sets\\refunds-test",
+  "tiers": {
+    "traces": 130,
+    "escalated_to_confirmer": 74,
+    "escalated_share": 0.569,
+    "confirmer_tokens_used": 883933,
+    "confirmer_tokens_if_alone": 1471083,
+    "confirmer_token_share": 0.601,
+    "screener_tokens": 1461440
+  },
+  "systems": [
+    {
+      "system": "B1 8B (fixes)",
+      "traces": 130,
+      "error_traces": 65,
+      "balanced_accuracy": 0.654,
+      "strict_f1": 0.444,
+      "strict_precision": 0.429,
+      "strict_recall": 0.462,
+      "precision": 0.643,
+      "recall": 0.692,
+      "f1": 0.667,
+      "false_alarm_rate": 0.385,
+      "localisation_recall": 0.462,
+      "type_accuracy_strict": 0.5,
+      "type_accuracy_lenient": 0.567,
+      "evidence_verified": 0.674,
+      "failed_audits": 5,
+      "tool_calls_mean": 3.8,
+      "duration_s_mean": 19.5,
+      "tokens_per_trace": 11242,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.571,
+        "false_completion": 0.375,
+        "hallucinated_fact": 0.111,
+        "ignored_tool_error": 0.714,
+        "language_mismatch": 0.5,
+        "skipped_required_step": 1.0,
+        "voucher_over_limit": 0.5,
+        "wrong_order": 0.333,
+        "wrong_tool_args": 0.167
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.739,
+          "false_alarm_rate": 0.433
+        },
+        "en": {
+          "recall": 0.632,
+          "false_alarm_rate": 0.273
+        },
+        "fr": {
+          "recall": 0.571,
+          "false_alarm_rate": 0.333
+        },
+        "it": {
+          "recall": 0.889,
+          "false_alarm_rate": 0.444
+        }
+      }
+    },
+    {
+      "system": "70B",
+      "traces": 130,
+      "error_traces": 65,
+      "balanced_accuracy": 0.685,
+      "strict_f1": 0.596,
+      "strict_precision": 0.523,
+      "strict_recall": 0.692,
+      "precision": 0.64,
+      "recall": 0.846,
+      "f1": 0.728,
+      "false_alarm_rate": 0.477,
+      "localisation_recall": 0.692,
+      "type_accuracy_strict": 0.511,
+      "type_accuracy_lenient": 0.711,
+      "evidence_verified": 0.852,
+      "failed_audits": 0,
+      "tool_calls_mean": 3.6,
+      "duration_s_mean": 15.7,
+      "tokens_per_trace": 11316,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.857,
+        "false_completion": 0.75,
+        "hallucinated_fact": 0.333,
+        "ignored_tool_error": 1.0,
+        "language_mismatch": 0.6,
+        "skipped_required_step": 1.0,
+        "voucher_over_limit": 0.333,
+        "wrong_order": 1.0,
+        "wrong_tool_args": 0.5
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.783,
+          "false_alarm_rate": 0.433
+        },
+        "en": {
+          "recall": 0.842,
+          "false_alarm_rate": 0.545
+        },
+        "fr": {
+          "recall": 0.857,
+          "false_alarm_rate": 0.4
+        },
+        "it": {
+          "recall": 1.0,
+          "false_alarm_rate": 0.667
+        }
+      }
+    },
+    {
+      "system": "B1 8B (fixes) screens, 70B confirms",
+      "traces": 130,
+      "error_traces": 65,
+      "balanced_accuracy": 0.715,
+      "strict_f1": 0.595,
+      "strict_precision": 0.643,
+      "strict_recall": 0.554,
+      "precision": 0.75,
+      "recall": 0.646,
+      "f1": 0.694,
+      "false_alarm_rate": 0.215,
+      "localisation_recall": 0.554,
+      "type_accuracy_strict": 0.528,
+      "type_accuracy_lenient": 0.778,
+      "evidence_verified": 0.863,
+      "failed_audits": 0,
+      "tool_calls_mean": 5.9,
+      "duration_s_mean": 30.0,
+      "tokens_per_trace": 18041,
+      "recall_by_type": {
+        "contradicts_tool_result": 0.714,
+        "false_completion": 0.375,
+        "hallucinated_fact": 0.111,
+        "ignored_tool_error": 0.857,
+        "language_mismatch": 0.5,
+        "skipped_required_step": 1.0,
+        "voucher_over_limit": 0.333,
+        "wrong_order": 1.0,
+        "wrong_tool_args": 0.333
+      },
+      "by_language": {
+        "de": {
+          "recall": 0.609,
+          "false_alarm_rate": 0.2
+        },
+        "en": {
+          "recall": 0.632,
+          "false_alarm_rate": 0.182
+        },
+        "fr": {
+          "recall": 0.571,
+          "false_alarm_rate": 0.2
+        },
+        "it": {
+          "recall": 0.889,
+          "false_alarm_rate": 0.333
+        }
+      }
+    }
+  ]
+}

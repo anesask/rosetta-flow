@@ -1,0 +1,16 @@
+{"trace_id": "refunds-41-0112", "world_seed": 41887051, "intent": "problem_in_window"}
+{"trace_id": "refunds-41-0105", "world_seed": 41831618, "intent": "parcel_lost"}
+{"trace_id": "refunds-41-0035", "world_seed": 41277288, "intent": "wants_compensation"}
+{"trace_id": "refunds-41-0037", "world_seed": 41293126, "intent": "problem_late"}
+{"trace_id": "refunds-41-0048", "world_seed": 41380235, "intent": "changed_mind"}
+{"trace_id": "refunds-41-0089", "world_seed": 41704914, "intent": "big_refund"}
+{"trace_id": "refunds-41-0103", "world_seed": 41815780, "intent": "already_refunded"}
+{"trace_id": "refunds-41-0117", "world_seed": 41926646, "intent": "parcel_late"}
+{"trace_id": "manufacturing-41-0108", "world_seed": 41855375, "intent": "measurement_out"}
+{"trace_id": "manufacturing-41-0025", "world_seed": 41198098, "intent": "measurement_ok"}
+{"trace_id": "manufacturing-41-0022", "world_seed": 41174341, "intent": "release_approved"}
+{"trace_id": "manufacturing-41-0049", "world_seed": 41388154, "intent": "restart_long_stop"}
+{"trace_id": "manufacturing-41-0036", "world_seed": 41285207, "intent": "gauge_invalid"}
+{"trace_id": "manufacturing-41-0032", "world_seed": 41253531, "intent": "tool_worn"}
+{"trace_id": "manufacturing-41-0117", "world_seed": 41926646, "intent": "restart_short_stop"}
+{"trace_id": "manufacturing-41-0114", "world_seed": 41902889, "intent": "release_pending"}

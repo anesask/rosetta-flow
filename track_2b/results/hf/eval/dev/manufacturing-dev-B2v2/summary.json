@@ -1,0 +1,36 @@
+{
+  "created": "2026-10-09T05:59:38+00:00",
+  "traces_file": "/repo/sets/manufacturing-dev/traces.jsonl",
+  "model": "auditor-v2",
+  "mode": "investigate",
+  "variant": "default",
+  "audited": 124,
+  "failures": [],
+  "stopped_by_budget": false,
+  "no_report": {
+    "tool_call_limit": 1
+  },
+  "verdicts": {
+    "issues_found": 55,
+    "ok": 68
+  },
+  "findings_by_type": {
+    "contradicts_tool_result": 20,
+    "skipped_required_step": 11,
+    "false_completion": 3,
+    "language_mismatch": 4,
+    "policy_violation": 18,
+    "wrong_tool_args": 1
+  },
+  "evidence_verified_rate": 0.702,
+  "tool_calls_mean": 3.8,
+  "duration_s_mean": 12.4,
+  "tokens": {
+    "prompt": 1459294,
+    "completion": 69596,
+    "per_trace": 12330,
+    "this_invocation": 1528890
+  },
+  "cost_chf": null,
+  "chf_per_1000_traces": null
+}

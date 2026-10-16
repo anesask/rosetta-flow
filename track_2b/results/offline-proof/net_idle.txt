@@ -1,0 +1,2 @@
+  lo     rx         0 B  tx         0 B  (60 s, rx 0 B/s, tx 0 B/s)
+  eth0   rx     32692 B  tx      1892 B  (60 s, rx 545 B/s, tx 32 B/s)

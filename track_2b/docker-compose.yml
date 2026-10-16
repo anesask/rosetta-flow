@@ -1,0 +1,12 @@
+services:
+  rosetta-flow:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    # Read from the shell or from .env in this folder
+    environment:
+      LLM_NAME: ${LLM_NAME:?set LLM_NAME}
+      LLM_BASE_URL: ${LLM_BASE_URL:?set LLM_BASE_URL}
+      LLM_API_KEY: ${LLM_API_KEY:?set LLM_API_KEY}
+      # Inside the container the app must listen on all interfaces; the port mapping above keeps it local.
+      HOST: 0.0.0.0
